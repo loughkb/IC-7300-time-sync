@@ -13,7 +13,7 @@
 # Also the serial port name for your IC-7300 on your computer. Change to 
 # match your setup. i.e. COM3 or similar for windows.
 #
-baudrt = 9600  #change to match your radio
+baudrate = 9600  #change to match your radio
 gmtoffset = 0  #change to a negative or positive offset from GMT if you
 #               want to use local time.  i.e. -5 for EST
 serialport = "/dev/ttyUSB0"  # Serial port of your radios serial interface.
@@ -66,7 +66,7 @@ while(seconds != 0):
         lastsec = seconds
 
 # Now that we've reached the top of the minute, set the radios time!
-ser = serial.Serial(serialport)
+ser = serial.Serial(serialport, baudrate)
 
 count = 0
 while(count < 11):

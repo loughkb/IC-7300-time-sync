@@ -64,6 +64,7 @@ while(seconds != 0):
    seconds = int(time.strftime("%S"))
    if(seconds != lastsec):
         lastsec = seconds
+   time.sleep(.01)
 
 # Now that we've reached the top of the minute, set the radios time!
 ser = serial.Serial(serialport, baudrate)
